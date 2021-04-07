@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+$primary-color: #3399ff;
+$primary-font: "Roboto", sans-sherif;
+.content__container {
+  font-family: $primary-font;
+  overflow: hidden;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  overflow: hidden;
+}
+
+.content__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 5fr));
+  grid-auto-rows: auto;
+  gap: 1em;
+}
+
+.welcome {
+  background-color: $primary-color;
+  padding: 2em;
+  color: white;
+  .card__rectangle {
+    height: 0.5em;
+    width: 5em;
+    background-color: white;
+    margin-bottom: 2em;
+  }
+  .card__header {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+  }
+  .card__content {
+    font-size: 1.3em;
+    line-height: 25px;
+  }
+}
+
+.card_button_wrapper {
+  display: flex;
+  margin-top: 1em;
+  padding: 0.5em;
+  justify-content: flex-end;
+
+  .card__button {
+    box-shadow: none;
+    border: 3.5px solid white;
+    font-size: 1.5em;
+    background-color: #66b2ff;
+    padding: 0.3em;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.ui__ux {
+  background-color: #d3d3d3;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+  .ui__header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 0;
+  }
+
+  .ui__content {
+    font-size: 1.3em;
+    line-height: 25px;
+    padding: 1.5em;
+    line-height: 25px;
+    p {
+      padding: 0;
+      margin-bottom: 0.8em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .content__container {
+    padding-right: 20em;
+    padding-left: 20em;
+    margin: 0;
+    margin-top: 1em;
+  }
+  .content__grid {
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  }
+
+  .welcome {
+    height: 100%;
+    .card__button {
+      margin-top: 4em;
+    }
+  }
+
+  .ui__ux {
+    height: 100%;
+  }
+
+  .grid__item1 {
+    grid-column: span 2;
+  }
+}
