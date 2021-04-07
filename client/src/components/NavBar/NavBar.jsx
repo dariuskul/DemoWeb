@@ -34,12 +34,9 @@ const NavBar = () => {
                             <li>
                             <Link style={{color: 'white', textDecoration: 'none'}} to='/service'>Service</Link>
                             </li>
-                            <li>
-                            <Link style={{color: 'white', textDecoration: 'none'}} to='/contact'>Contact</Link>
-                            </li>
                             <li onMouseOver={()=> setOpen(!open)} onMouseOut={()=> setOpen(!open)}>
                                 {/* Kaip supratau, tai dropdown listui nereikia, kad kažkur nueitų, tai palieku kaip yra. */}
-                                <a>About me</a>
+                                <a>Works</a>
                                 <ul>
                                     <li>
                                     <a>ALL</a>
@@ -58,7 +55,12 @@ const NavBar = () => {
                                     </li>
                                 </ul>
                             </li>
-                            <li>Contact</li>
+                            <li>
+                                <Link to='/about' style={{color: 'white', textDecoration: 'none'}}>About me</Link>
+                            </li>
+                            <li>
+                            <Link to='/contact' style={{color: 'white', textDecoration: 'none'}}>Contact</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
