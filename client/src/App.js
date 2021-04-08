@@ -5,6 +5,7 @@ import Home from "./components/SidePages/Home/Home";
 import Contact from "./components/SidePages/Contact/Contact";
 import About from "./components/SidePages/About/About";
 import Service from "./components/SidePages/Service/Service";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' component={About}/>
         <Route path='/service' component={Service}/>
       </Switch>
+      <Footer/>
       </BrowserRouter>
     </div>
   );
