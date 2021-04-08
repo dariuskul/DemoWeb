@@ -6,7 +6,7 @@ const Service = () => {
     return(
         <div className="side__container">
           <div className="content__header">
-              <h1>About</h1>
+              <h1>Services</h1>
               <BackButton className="flex__button"/>
           </div>
           <div className="content__rectangle"></div>

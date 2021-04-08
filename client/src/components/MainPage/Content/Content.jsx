@@ -12,7 +12,14 @@ const Content = () => {
                         </div>
                         <div className="card__rectangle"></div>
                         <div className="card__content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut magna nec leo tempor fermentum quis consequat libero. Aliquam malesuada aliquet facilisis. Fusce enim nibh, feugiat quis magna sagittis.</p>
+                        <p>Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed 
+do eiusmod tempor incididunt ut 
+labore et dolore magna aliqua. Ut 
+enim ad minim veniam, quis 
+nostrud exercitation ullamco 
+laboris nisi ut aliquip ex ea 
+commodo consequat.</p>
                        
                         </div>
                         <div className="card_button_wrapper">
