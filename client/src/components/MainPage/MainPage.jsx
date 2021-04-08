@@ -8,7 +8,7 @@ import {fetchData}  from '../../redux/actions'
 const MainPage = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(fetchData('vilnius','long-term'))
+        dispatch(fetchData('kaunas','long-term'))
     },[dispatch])
     return(
         <>

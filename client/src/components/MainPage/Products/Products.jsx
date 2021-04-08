@@ -3,14 +3,18 @@ import './products.scss'
 import umbrella from '../../../images/umbrella.svg'
 import coffe from '../../../images/coffe.jpg'
 import books from '../../../images/vandan-patel-vfiuGpL9fiU-unsplash 1 1.jpg'
+import { useSelector } from 'react-redux'
+import { imageChooser } from '../../../utils/chooseImage'
 const Products = () => {
+    const image = useSelector((state)=> state)
+    const imageToShow = imageChooser(image)
     return(
         <main>
             <h1 className="products__header">Products</h1>
             <h2 className="products__subheader">Offers today</h2>
             <div className="products">
                 <div className="item item1">
-                    <img className="apiImg" src={umbrella}alt="umbrella"/>
+                    {imageToShow? <img className="apiImg" src={imageToShow}alt="umbrella"/> : ''}
                 </div>
                 <div className="item item2">
                     <div className="test2">

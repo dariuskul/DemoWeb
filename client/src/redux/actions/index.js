@@ -5,11 +5,11 @@ export const fetchData = (placeCode, forecast) => async (dispatch) =>{
 
     try {
         const {data: {forecastTimestamps}} = await api.fetchData(placeCode,forecast)
-        const firstTimeStamp = forecastTimestamps[0].conditionCode;
+        const firstTimeStamp = forecastTimestamps[60].conditionCode; // picked a random item
         console.log(firstTimeStamp)
         dispatch({type: GET_FORECAST, payload: firstTimeStamp})
         
     } catch (error) {
-        console.log(error.message);
+        alert("Relaod the page and wait.")
     }
 }
