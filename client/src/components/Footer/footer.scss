@@ -2,15 +2,20 @@
 $primary-font: "Roboto", sans-sherif;
 footer {
   background-color: #696969;
-  padding: 1em 2em 2em 2em;
+  padding: 4em 2em 3em 2em;
+  margin-top: 20em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: $primary-font;
+  color: white;
 
+  .footer__block {
+    display: none;
+  }
   .company__info {
-    color: white;
     font-weight: bolder;
+    display: flex;
     text-transform: uppercase;
     span {
       font-weight: normal;
@@ -18,7 +23,42 @@ footer {
   }
 
   .copyright {
-    color: white;
+    font-weight: normal;
     margin-left: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  footer {
+    display: block;
+    padding-left: 12em;
+    padding-right: 12em;
+    .footer__block {
+      display: flex;
+      justify-content: space-between;
+      .foooter__list {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          cursor: pointer;
+          li {
+            margin-right: 1em;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+
+    .footer__desc {
+      text-align: justify;
+      max-width: 25%;
+      margin: 0;
+    }
+
+    .company__info {
+      display: flex;
+      margin-right: 1em;
+      justify-content: flex-end;
+    }
   }
 }
