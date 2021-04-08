@@ -126,8 +126,8 @@ $primary-font: "Roboto", sans-sherif;
 
 @media only screen and (min-width: 1025px) {
   .nav__wrapper {
-    padding-right: 20em;
-    padding-left: 20em;
+    padding-right: 15em;
+    padding-left: 15em;
   }
   .upper__nav {
     display: flex;
@@ -137,9 +137,6 @@ $primary-font: "Roboto", sans-sherif;
   }
   .bottom__nav {
     display: flex;
-    .bottom__item {
-      flex: 1;
-    }
     .bottom__links {
       display: block;
     }
