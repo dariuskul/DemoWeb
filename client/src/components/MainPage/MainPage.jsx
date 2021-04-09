@@ -11,11 +11,11 @@ const MainPage = () => {
         dispatch(fetchData('kaunas','long-term'))
     },[dispatch])
     return(
-        <>
+        <main>
         <Content/>
         <Products/>
         <Contact/>
-        </>
+        </main>
     )
 }
 

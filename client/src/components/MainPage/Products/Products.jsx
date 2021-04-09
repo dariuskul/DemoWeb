@@ -9,7 +9,7 @@ const Products = () => {
     const image = useSelector((state)=> state.weather)
     const imageToShow = imageChooser(image)
     return(
-        <main>
+        <div className="products__container">
             <h1 className="products__header">Products</h1>
             <h2 className="products__subheader">Offers today</h2>
             <div className="products">
@@ -31,7 +31,7 @@ const Products = () => {
                     
                 </div>
             </div>
-        </main>
+        </div>
     )
 }
 export default Products;

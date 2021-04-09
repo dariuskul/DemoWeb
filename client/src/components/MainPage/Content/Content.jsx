@@ -29,7 +29,7 @@ commodo consequat.</p>
                 </div>
                 <div className="grid__item1">
                 <div className="ui__ux">
-                    <div className="ux__img">
+                    <div className="ui__img">
                     <img src={coffe} alt="Coffe img"/>
                     </div>
                     <div className="ui__header">ui/ux design</div>

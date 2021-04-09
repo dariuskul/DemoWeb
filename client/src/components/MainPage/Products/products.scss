@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 $primary-color: #3399ff;
 $primary-font: "Roboto", sans-sherif;
-main {
+.products__container {
   font-family: $primary-font;
   overflow: hidden;
   margin-top: 2em;
@@ -64,7 +64,7 @@ main {
 }
 
 @media only screen and (min-width: 1025px) {
-  main {
+  .products__container {
     padding-right: 15em;
     padding-left: 15em;
     margin-top: 2.5em;

@@ -8,19 +8,20 @@ $primary-font: "Roboto", sans-sherif;
   margin-right: 1em;
   margin-left: 1em;
   overflow: hidden;
+  line-height: 2em;
 }
 
 .content__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 5fr));
-  grid-auto-rows: auto;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .welcome {
   background-color: $primary-color;
   padding: 2em;
   color: white;
+  display: flex;
+  flex-direction: column;
   .card__rectangle {
     height: 0.5em;
     width: 5em;
@@ -38,6 +39,14 @@ $primary-font: "Roboto", sans-sherif;
   }
 }
 
+.grid__item {
+  flex: 100%;
+  margin-bottom: 1em;
+}
+.grid__item1 {
+  flex: 100%;
+}
+
 .card_button_wrapper {
   display: flex;
   margin-top: 1em;
@@ -47,7 +56,7 @@ $primary-font: "Roboto", sans-sherif;
   .card__button {
     box-shadow: none;
     border: 3.5px solid white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: #66b2ff;
     padding: 0.3em;
     outline: none;
@@ -59,11 +68,6 @@ $primary-font: "Roboto", sans-sherif;
 .ui__ux {
   background-color: #d3d3d3;
   overflow: hidden;
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
   .ui__header {
     font-size: 2em;
     font-weight: 900;
@@ -74,7 +78,6 @@ $primary-font: "Roboto", sans-sherif;
     padding-left: 1em;
     padding-bottom: 0;
   }
-
   .ui__content {
     font-size: 1.3em;
     line-height: 25px;
@@ -85,42 +88,24 @@ $primary-font: "Roboto", sans-sherif;
       margin-bottom: 0.8em;
     }
   }
-}
-
-@media only screen and (min-width: 1230px) {
-  .content__container {
-    margin-left: 0;
-    padding-right: 15em;
-    padding-left: 15em;
-  }
-  .content__grid {
-    grid-template-columns: repeat(4, minmax(3rem, 1fr));
-  }
-
-  .welcome {
-    border-collapse: collapse;
-    display: flex;
-    flex-direction: column;
-
-    .card_button_wrapper {
-      margin-top: 5em;
-      align-self: flex-end;
+  // this is not very well written, but it works.
+  .ui__img {
+    img {
+      height: 15em;
+      width: 100%;
+      object-fit: cover;
     }
   }
-
-  .ui__ux {
-    height: 100%;
-  }
-
-  .grid__item1 {
-    grid-column: span 2;
-  }
 }
 
-@media only screen and (min-width: 1228px) {
+@media only screen and (min-width: 1189px) {
+  .content__container {
+    padding-right: 15em;
+    padding-left: 15em;
+    margin-left: 0;
+  }
   .content__grid {
-    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-    grid-auto-rows: auto;
+    flex-direction: row;
     .grid__item {
       grid-column: span 1;
     }
@@ -136,9 +121,18 @@ $primary-font: "Roboto", sans-sherif;
   .ui__ux {
     width: 100%;
     height: auto;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 
+  .grid__item {
+    flex: 40%;
+    margin-right: 1em;
+  }
   .grid__item1 {
-    grid-column: span 2;
+    flex: 80%;
   }
 }

@@ -6,7 +6,6 @@ import './style.scss'
 const BackButton = (props) => {
     const history = useHistory();
     const urlArray = useSelector((state)=> state.url)
-    console.log(urlArray)
     const dispatch = useDispatch();
     const urlToGoBack = (urlArray.length > 1 ? urlArray[urlArray.length-2] : '/');
 
@@ -14,8 +13,6 @@ const BackButton = (props) => {
         dispatch(removeUrl())
         history.push(urlToGoBack)
     }
-
-    console.log(urlToGoBack)
     return(
         <button className="back__button" onClick={functions}>
             <div className="button__typography">

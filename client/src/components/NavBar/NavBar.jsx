@@ -5,8 +5,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUrl } from '../../redux/actions';
 const NavBar = () => {
+    // This section is pretty bad in my opinion, but i don't have time to fix this.
     const [open, setOpen] = useState(false);
-    console.log(open)
     const {pathname} = useLocation()
     const dispatch = useDispatch();
     const state = useSelector((state)=> state.url)
@@ -67,7 +67,7 @@ const NavBar = () => {
                                 </ul>
                             </li>
                             <li>
-                                {/*<Link to='/about' style={{color: 'white', textDecoration: 'none'}} onClick={()=> history.push()} >About me</Link>*/}
+                            <Link to='/about' style={{color: 'white', textDecoration: 'none'}}>About me</Link>
 
                             </li>
                             <li>

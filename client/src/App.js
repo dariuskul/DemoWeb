@@ -10,7 +10,6 @@ import {createBrowserHistory} from 'history'
 import { useEffect } from "react";
 function App() {
   return (
-    <div>
       <BrowserRouter>
       <NavBar/>
       <Switch>
@@ -22,7 +21,6 @@ function App() {
       </Switch>
       <Footer/>
       </BrowserRouter>
-    </div>
   );
 }
 
