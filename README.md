@@ -29,4 +29,4 @@ npm start
 
 ## Demo
 
-Coming soon..
+https://adeoweb.netlify.app/
