@@ -6,7 +6,7 @@ import books from '../../../images/vandan-patel-vfiuGpL9fiU-unsplash 1 1.jpg'
 import { useSelector } from 'react-redux'
 import { imageChooser } from '../../../utils/chooseImage'
 const Products = () => {
-    const image = useSelector((state)=> state)
+    const image = useSelector((state)=> state.weather)
     const imageToShow = imageChooser(image)
     return(
         <main>

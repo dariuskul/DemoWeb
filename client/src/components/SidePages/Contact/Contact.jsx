@@ -2,12 +2,12 @@ import React from 'react'
 import BackButton from '../../BackButton/BackButton';
 import '../sidepages.scss'
 
-const Contact = () => {
+const Contact = ({match,destination}) => {
     return(
         <div className="side__container">
           <div className="content__header">
               <h1>Contact</h1>
-              <BackButton className="flex__button"/>
+              <BackButton className="flex__button" match={match} destination={destination} />
           </div>
           <div className="content__rectangle"></div>
           <section>

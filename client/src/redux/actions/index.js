@@ -13,3 +13,11 @@ export const fetchData = (placeCode, forecast) => async (dispatch) =>{
         alert("Relaod the page and wait.")
     }
 }
+
+export const addUrl = (url) => (dispatch) =>{
+    dispatch({type: 'ADD_URL', payload: url});
+}
+
+export const removeUrl = () => (dispatch)=>{
+    dispatch({type: 'REMOVE_URL'});
+}

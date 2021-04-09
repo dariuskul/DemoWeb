@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import MenuIcon from '@material-ui/icons/Menu';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addUrl } from '../../redux/actions';
 const NavBar = () => {
     const [open, setOpen] = useState(false);
     console.log(open)
+    const {pathname} = useLocation()
+    const dispatch = useDispatch();
+    const state = useSelector((state)=> state.url)
+    useEffect(()=>{
+     if(pathname!== state[state.length-1] && pathname!=='/'){
+        dispatch(addUrl(pathname))
+      }
+
+    },[pathname,dispatch,state])
     return(
         <nav className="nav__wrapper">
                 <div className="upper__nav">
@@ -56,7 +67,8 @@ const NavBar = () => {
                                 </ul>
                             </li>
                             <li>
-                                <Link to='/about' style={{color: 'white', textDecoration: 'none'}}>About me</Link>
+                                {/*<Link to='/about' style={{color: 'white', textDecoration: 'none'}} onClick={()=> history.push()} >About me</Link>*/}
+
                             </li>
                             <li>
                             <Link to='/contact' style={{color: 'white', textDecoration: 'none'}}>Contact</Link>
