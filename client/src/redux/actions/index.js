@@ -1,6 +1,5 @@
 import * as api from '../../api/index'
-import {GET_FORECAST} from '../constants/actionType'
-
+import {GET_FORECAST, ADD_URL, REMOVE_URL, REMOVE_ALL} from '../constants/actionType'
 export const fetchData = (placeCode, forecast) => async (dispatch) =>{
 
     try {
@@ -15,9 +14,13 @@ export const fetchData = (placeCode, forecast) => async (dispatch) =>{
 }
 
 export const addUrl = (url) => (dispatch) =>{
-    dispatch({type: 'ADD_URL', payload: url});
+    dispatch({type: ADD_URL, payload: url});
 }
 
 export const removeUrl = () => (dispatch)=>{
-    dispatch({type: 'REMOVE_URL'});
+    dispatch({type: REMOVE_URL});
+}
+
+export const removeAll = () => (dispatch)=>{
+    dispatch({type: REMOVE_ALL});
 }

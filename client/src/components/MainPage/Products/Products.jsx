@@ -1,6 +1,5 @@
 import React from 'react'
 import './products.scss'
-import umbrella from '../../../images/umbrella.svg'
 import coffe from '../../../images/coffe.jpg'
 import books from '../../../images/vandan-patel-vfiuGpL9fiU-unsplash 1 1.jpg'
 import { useSelector } from 'react-redux'
@@ -14,7 +13,7 @@ const Products = () => {
             <h2 className="products__subheader">Offers today</h2>
             <div className="products">
                 <div className="item item1">
-                    {imageToShow? <img className="apiImg" src={imageToShow}alt="umbrella"/> : ''}
+                    {imageToShow? <img className="apiImg" src={imageToShow}alt="umbrella"/> : 'Loading...'}
                 </div>
                 <div className="item item2">
                     <div className="test2">

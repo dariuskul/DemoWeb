@@ -10,8 +10,8 @@ const BackButton = (props) => {
     const urlToGoBack = (urlArray.length > 1 ? urlArray[urlArray.length-2] : '/');
 
     const functions = () =>{
-        dispatch(removeUrl())
         history.push(urlToGoBack)
+        dispatch(removeUrl())
     }
     return(
         <button className="back__button" onClick={functions}>

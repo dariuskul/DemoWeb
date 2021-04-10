@@ -10,6 +10,7 @@ $primary-font: "Roboto", sans-sherif;
 .bottom__nav {
   justify-content: space-between;
   align-items: center;
+  padding: 0;
   .bottom__links {
     display: none;
     ul {
@@ -124,7 +125,7 @@ $primary-font: "Roboto", sans-sherif;
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1183px) {
   .nav__wrapper {
     padding-right: 15em;
     padding-left: 15em;

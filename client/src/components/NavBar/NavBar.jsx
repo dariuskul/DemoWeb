@@ -11,9 +11,9 @@ const NavBar = () => {
     const dispatch = useDispatch();
     const state = useSelector((state)=> state.url)
     useEffect(()=>{
-     if(pathname!== state[state.length-1] && pathname!=='/'){
-        dispatch(addUrl(pathname))
-      }
+        if(pathname!== state[state.length-1] && pathname!=='/'){
+            dispatch(addUrl(pathname))
+          }
 
     },[pathname,dispatch,state])
     return(
