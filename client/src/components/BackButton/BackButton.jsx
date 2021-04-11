@@ -1,9 +1,8 @@
-import { Children } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory } from 'react-router-dom'
 import { removeUrl } from '../../redux/actions';
 import './style.scss'
-const BackButton = (props) => {
+const BackButton = () => {
     const history = useHistory();
     const urlArray = useSelector((state)=> state.url)
     const dispatch = useDispatch();

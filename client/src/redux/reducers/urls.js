@@ -1,5 +1,6 @@
 
 import {ADD_URL,REMOVE_URL,REMOVE_ALL} from '../constants/actionType'
+// eslint-disable-next-line import/no-anonymous-default-export
 export default(urls=[], action)=>{
     switch(action.type){
         case ADD_URL:

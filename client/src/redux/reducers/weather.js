@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 // There is only one reducer, therefore I am naming it just index.js
 import {GET_FORECAST} from '../constants/actionType'
 

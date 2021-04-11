@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './navbar.scss'
 import MenuIcon from '@material-ui/icons/Menu';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, Route, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUrl } from '../../redux/actions';
 const NavBar = () => {
-    // This section is pretty bad in my opinion, but i don't have time to fix this.
+    // This section is pretty bad in my opinion, but i did not have time to fix this.
     const [open, setOpen] = useState(false);
     const {pathname} = useLocation()
     const dispatch = useDispatch();
@@ -47,22 +47,22 @@ const NavBar = () => {
                             </li>
                             <li onMouseOver={()=> setOpen(!open)} onMouseOut={()=> setOpen(!open)}>
                                 {/* Kaip supratau, tai dropdown listui nereikia, kad kažkur nueitų, tai palieku kaip yra. */}
-                                <a>Works</a>
+                                <a href="/">Works</a>
                                 <ul>
                                     <li>
-                                    <a>ALL</a>
+                                    <Link style={{color: 'white', textDecoration: 'none'}} to='/service'>Service</Link>
                                     </li>
                                     <li>
-                                        <a>Graphic</a>
+                                        <a href="/">Graphic</a>
                                     </li>
                                     <li>
-                                        <a >Design</a>
+                                        <a href="/">Design</a>
                                     </li>
                                     <li>
-                                        <a >Logo</a>
+                                        <a href="/">Logo</a>
                                     </li>
                                     <li>
-                                        <a >Website</a>
+                                        <a href="/">Website</a>
                                     </li>
                                 </ul>
                             </li>
@@ -75,6 +75,9 @@ const NavBar = () => {
                             </li>
                         </ul>
                     </div>
+                    <Route path={``}>
+
+                    </Route>
                 </div>
         </nav>
     )
