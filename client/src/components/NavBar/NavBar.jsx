@@ -50,7 +50,7 @@ const NavBar = () => {
                                 <a href="/">Works</a>
                                 <ul>
                                     <li>
-                                    <Link style={{color: 'white', textDecoration: 'none'}} to='/service'>Service</Link>
+                                    <a href="/">Service</a>
                                     </li>
                                     <li>
                                         <a href="/">Graphic</a>
