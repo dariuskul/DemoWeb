@@ -31,4 +31,4 @@ NOTE: if alert is showing up over and over again, check https://cors-anywhere.he
 
 ## Demo
 
-https://adeoweb.netlify.app/
+https://demolandingapp.netlify.app
